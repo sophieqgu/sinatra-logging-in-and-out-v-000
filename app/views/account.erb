@@ -11,6 +11,7 @@
       <p>Balance: <%= Helper.current_user(session).Balance %></p>
       <a href="/logout">Log Out</a>
     <% else %>
-      <a href="/index"></a>
+      <a href="/index">Log In</a>
+    <% end %>
   </body>
 </html>
