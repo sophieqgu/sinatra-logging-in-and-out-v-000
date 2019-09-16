@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
   </head>
   <body id="page-top">
-    <% if @user.is_logged_in? %>
+    <% if User.current_user.is_logged_in? %>
+    
       <a href="/logout">Log Out</a>
     
   </body>
