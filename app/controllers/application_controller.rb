@@ -12,6 +12,13 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     @user = User.find_by(username: params[:username], password: params[:password])
+    if @user 
+      session[:id] = @user.id 
+      redirect to '/account'
+    else 
+      "Sorry, the username or password does not match our record."
+      redirect to '/'
+    end 
   end
 
   get '/account' do
