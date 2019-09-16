@@ -16,8 +16,7 @@ class ApplicationController < Sinatra::Base
       session[:id] = @user.id 
       redirect to '/account'
     else 
-      "Sorry, the username or password does not match our record."
-      redirect to '/'
+      redirect to '/error'
     end 
   end
 
